@@ -1,15 +1,13 @@
 package com.sanitas.ini.services.operations;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
 public class OperacionFactory {
-	
-    @Autowired
-    private static ApplicationContext context;
     
 	public static Operacion crear(String operador) {
-				
+			
+		ApplicationContext context = ApplicationContextProvider.getContext();
+	 
 		 return context.getBean(operador, Operacion.class);
 			 
 	}
