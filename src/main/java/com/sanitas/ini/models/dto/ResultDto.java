@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 public class ResultDto {
 	
 	private BigDecimal resultado;
-
 	
 	public BigDecimal getResultado() {
 		return resultado;

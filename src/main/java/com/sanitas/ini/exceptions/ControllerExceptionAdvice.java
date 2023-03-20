@@ -2,7 +2,6 @@ package com.sanitas.ini.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,9 +10,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
 import io.corp.calculator.TracerImpl;
-
 
 @RestControllerAdvice
 public class ControllerExceptionAdvice {
@@ -52,7 +49,6 @@ public class ControllerExceptionAdvice {
 		tracer.trace(errorResponse.getMessage());
 		
 		return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-
 	}
 	
 	@ExceptionHandler(value = NoSuchBeanDefinitionException.class)
@@ -63,6 +59,5 @@ public class ControllerExceptionAdvice {
 		tracer.trace(errorResponse.getMessage());
 		
 		return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-
 	}
 }

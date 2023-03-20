@@ -1,7 +1,6 @@
 package com.sanitas.ini.services.operations;
 
 import java.math.BigDecimal;
-
 import org.springframework.stereotype.Service;
 
 @Service("resta")
@@ -12,5 +11,4 @@ public class Resta implements Operacion {
 		 
 		return x.subtract(y);
 	}
-
 }

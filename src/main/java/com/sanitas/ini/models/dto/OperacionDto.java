@@ -1,7 +1,6 @@
 package com.sanitas.ini.models.dto;
 
 import java.math.BigDecimal;
-
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -16,14 +15,12 @@ public class OperacionDto {
 	@NotNull
 	private BigDecimal num2;
 	
-	
 	public OperacionDto(String operador, BigDecimal num1, BigDecimal num2) {
 		super();
 		this.operador = operador;
 		this.num1 = num1;
 		this.num2 = num2;
 	}
-	
 	
 	public String getOperador() {
 		return operador;

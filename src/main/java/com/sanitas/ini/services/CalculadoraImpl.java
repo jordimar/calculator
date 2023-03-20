@@ -20,9 +20,9 @@ public class CalculadoraImpl implements Calculadora {
 		num1 = operacionDto.getNum1();
 		num2 = operacionDto.getNum2();
 		operador = operacionDto.getOperador();		
-				
-		Operacion operacion = OperacionFactory.crear(operador);
-		
+	
+		Operacion operacion = OperacionFactory.crear(operador); 
+	
 		resultado = operacion.operar(num1, num2);
 
 		return resultado;		
